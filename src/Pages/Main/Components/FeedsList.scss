@@ -1,0 +1,20 @@
+@import "../../../Styles/common.scss";
+
+.FeedsList {
+  text-align: center;
+  cursor: pointer;
+  width: 62px;
+  height: 62px;
+  padding: 1px;
+  border: 2px solid $--color-pink;
+  border-radius: 50%;
+
+  img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+  }
+
+  span {
+  }
+}

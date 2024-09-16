@@ -1,5 +1,26 @@
+@import "./common.scss";
+
 /* Universal tags */
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: $--color-white-grey;
+}
+
+ul {
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
 }

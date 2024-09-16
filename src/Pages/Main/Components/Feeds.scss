@@ -1,0 +1,19 @@
+@import "../../../Styles/common.scss";
+
+.Feeds {
+  width: 700px;
+  height: 100%;
+  margin-right: 100px;
+
+  .FeedsContainer {
+    height: 118px;
+    padding: 16px 0;
+    border: 1px solid $--color-grey;
+    background-color: $--color-white;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

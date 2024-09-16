@@ -9,6 +9,17 @@ $--color-dark-grey: #8e8e8e;
 $--color-white-blue: #c0dffd;
 $--color-blue: #0095f6;
 $--color-dark-blue: #385185;
+$--color-pink: #c72e8e;
+
+/* Font size */
+$--font-size-2x-large: 24px;
+$--font-size-large: 16px;
+$--font-size-medium: 14px;
+$--font-size-small: 13px;
+$--font-size-micro: 12px;
+
+/* Annimation */
+$--annimation-duration: 700ms;
 
 /* Typography */
 h1 {
@@ -17,6 +28,18 @@ h1 {
 
 input {
   outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+strong {
+  font-size: $--font-size-medium;
+}
+
+span {
+  font-size: $--font-size-small;
 }
 
 @mixin flex-center {

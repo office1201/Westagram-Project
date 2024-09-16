@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import FormLayout from "./FormLayout";
 import Logo from "./Logo";
 import Input from "./Input";
-import "./Form.scss";
 import Button from "./Button";
+import "./Form.scss";
 
 class Form extends Component {
   state = {

@@ -1,0 +1,76 @@
+@import "../../../Styles/common.scss";
+
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 4px 145px;
+  border-bottom: 1px solid $--color-grey;
+  background-color: $--color-white;
+  z-index: 10;
+
+  h1 {
+    color: $--color-blue;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 215px;
+    height: 30px;
+    border: 1px solid $--color-grey;
+    border-radius: 2px;
+    background-color: $--color-white-grey;
+    input {
+      border: none;
+      background-color: $--color-white-grey;
+    }
+
+    i {
+      color: $--color-dark-grey;
+      font-size: 13px;
+      margin-left: 4px;
+      cursor: pointer;
+    }
+  }
+
+  .Icons {
+    display: flex;
+
+    .User {
+      display: flex;
+      flex-direction: column;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      margin-left: 20px;
+      cursor: pointer;
+
+      .isActive {
+        padding: 1px;
+        border: 1px solid $--color-dark-blue;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      .Menus {
+        width: 173px;
+        margin-top: 4px;
+        border: 1px solid $--color-grey;
+        border-radius: 4px;
+        background-color: $--color-white;
+        z-index: 10;
+      }
+    }
+  }
+}

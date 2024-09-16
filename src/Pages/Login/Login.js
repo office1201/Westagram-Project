@@ -19,8 +19,8 @@ const signInData = [
   { type: "password", text: "비밀번호" },
 ];
 
-const signUpData = [
-  { type: "email", text: "전화번호, 사용자 이름 또는 이메일" },
-  { type: "password", text: "비밀번호" },
-  { type: "name", text: "이름" },
-];
+// const signUpData = [
+//   { type: "email", text: "전화번호, 사용자 이름 또는 이메일" },
+//   { type: "password", text: "비밀번호" },
+//   { type: "name", text: "이름" },
+// ];

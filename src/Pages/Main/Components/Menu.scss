@@ -1,0 +1,10 @@
+@import "../../../Styles/common.scss";
+
+.Menu {
+  padding: 10px;
+  font-size: 12px;
+
+  &:hover {
+    background-color: $--color-white-blue;
+  }
+}

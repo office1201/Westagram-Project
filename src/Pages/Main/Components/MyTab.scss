@@ -1,0 +1,33 @@
+@import "../../../Styles/common.scss";
+
+.MyTab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .MyTabLogo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 56px;
+      height: 56px;
+      margin-right: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    strong {
+      color: black;
+      font-size: 15px;
+    }
+
+    .MyName {
+      color: $--color-dark-grey;
+    }
+  }
+  .Follow {
+    color: $--color-blue;
+    font-size: $--font-size-small;
+    font-weight: 600;
+  }
+}

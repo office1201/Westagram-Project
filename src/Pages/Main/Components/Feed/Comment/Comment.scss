@@ -1,0 +1,66 @@
+@import "../../../../../Styles/common.scss";
+
+.FeedComment {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px 16px 0px 16px;
+  background-color: $--color-white;
+  border: 1px solid $--color-grey;
+  border-top: none;
+  transform: translateY(-5px);
+
+  .FeedCommentContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .FeedCommentContainer > a > span {
+    width: 100%;
+    color: $--color-dark-blue;
+  }
+  .FeedCommentContainer > span {
+    margin-bottom: 3px;
+  }
+  .FeedCommentContainer > span:nth-child(4) {
+    color: $--color-dark-grey;
+  }
+
+  .addComment {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .Ago {
+    color: $--color-dark-grey;
+    font-size: $--font-size-micro;
+  }
+
+  .Chat {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: 90%;
+      height: 50px;
+      background-color: $--color-white;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      color: $--color-blue;
+      font-size: $--font-size-medium;
+      font-weight: 600;
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    .ChatLine {
+      position: absolute;
+      width: 100%;
+      border-top: 1px solid $--color-grey;
+      transform: translateX(-16px);
+    }
+  }
+}

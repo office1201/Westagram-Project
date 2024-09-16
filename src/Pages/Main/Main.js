@@ -13,13 +13,26 @@ class Main extends Component {
     };
   }
 
-  handleCommentInput = (e) => {
+  //   <input
+  //   onChange={this.handleChange}
+  //   onKeyUp={this.clickBtn}
+  //   onKeyDown={this.checkComment}
+  //   type="text"
+  //   class="feed__content__chat-input"
+  //   placeholder="댓글 달기..."
+  // />
+  // <button
+  //   onClick={this.addComment}
+  //   className={this.state.isActiveBtn ? "feed__content__chat-button" : "feed__content__chat-button-change-btn"}
+  // >
+
+  handleChange = (e) => {
     this.setState({
       comment: e.target.value,
     });
   };
 
-  addCommentList = () => {
+  addComment = () => {
     const comment = { str: this.state.comment };
     this.setState({
       commentArr: this.state.commentArr.concat(comment),
@@ -31,7 +44,7 @@ class Main extends Component {
     if (e.key === "Backspace" || this.state.comment.length === 0) {
       return;
     } else if (e.key === "Enter") {
-      this.addCommentList();
+      this.addComment();
     }
   };
 
@@ -258,157 +271,6 @@ class Main extends Component {
                     </div>
                   </div>
                 </article>
-              </section>
-              <section id="sidebar">
-                <div class="sidebar__container">
-                  <div class="sidebar__wrapper">
-                    <div class="sidebar__user">
-                      <div class="sidebar__user__logo">
-                        <img
-                          class="sidebar__user-logo-img"
-                          src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/164807560_952888125450516_7510156972160703983_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=7hp8SiIu5m0AX_-kSzb&ccb=7-4&oh=181d356d9ccaf83fd9cffed27ed6b412&oe=608A53D5&_nc_sid=7b02f1"
-                        />
-                        <div class="sidebar__user-text">
-                          <span>
-                            <strong>nakiaathome</strong>
-                          </span>
-                          <br />
-                          <span>태현</span>
-                        </div>
-                      </div>
-                      <button class="sidebar__user-button">전환</button>
-                    </div>
-                    <div class="sidebar__friend">
-                      <div class="sidebar__friend__recommend">
-                        <strong>회원님을 위한 추천</strong>
-                      </div>
-                      <ul class="sidebar__firend__list">
-                        <li class="sidebar__friend__list__item">
-                          <div>
-                            <div>
-                              <img
-                                class="sidebar__friend__list__item-img-active"
-                                src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/68710948_2353091111411348_4497464812049006592_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=aPn9CxrGgVAAX-BMx-v&ccb=7-4&oh=0d62b0aa421735c8a2714035da0c4f8f&oe=60886629&_nc_sid=a9513d"
-                              />
-                            </div>
-                            <div class="sidebar__friend__list__item-text">
-                              <span>
-                                <strong>harrywinks</strong>
-                              </span>
-                              <br />
-                              <span>인기</span>
-                            </div>
-                          </div>
-                          <span>팔로우</span>
-                        </li>
-                        <li class="sidebar__friend__list__item">
-                          <div>
-                            <img
-                              class="sidebar__friend__list__item-img"
-                              src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s320x320/164056588_810082426256749_2969750331236833407_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=jmUudHmEFEIAX-xqucs&ccb=7-4&oh=e3baff73525fade8672f2fbccb7ac37d&oe=608860E0&_nc_sid=7bff83"
-                            />
-                            <div class="sidebar__friend__list__item-text">
-                              <span>
-                                <strong>kyliejenner</strong>
-                              </span>
-                              <br />
-                              <span>인기</span>
-                            </div>
-                          </div>
-                          <span>팔로우</span>
-                        </li>
-                        <li class="sidebar__friend__list__item">
-                          <div>
-                            <img
-                              class="sidebar__friend__list__item-img-active"
-                              src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s320x320/65302424_346059889400191_5999870605850050560_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=MBOUUGjN5i8AX8nl2TX&ccb=7-4&oh=728a1b19406a9382af298c8d196cb90f&oe=608AB72C&_nc_sid=7bff83"
-                            />
-                            <div class="sidebar__friend__list__item-text">
-                              <span>
-                                <strong>brunomars</strong>
-                              </span>
-                              <br />
-                              <span>회원님을 위한 추천</span>
-                            </div>
-                          </div>
-                          <span>팔로우</span>
-                        </li>
-                        <li class="sidebar__friend__list__item">
-                          <div>
-                            <img
-                              class="sidebar__friend__list__item-img"
-                              src="https://instagram.fixc1-2.fna.fbcdn.net/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=instagram.fixc1-2.fna.fbcdn.net&_nc_ohc=mhDR9_0DpXIAX85wQIj&ccb=7-4&oh=6125b628d90b979b3cfece279d293c37&oe=608B680F&_nc_sid=712cc3&ig_cache_key=YW5vbnltb3VzX3Byb2ZpbGVfcGlj.2-ccb7-4"
-                            />
-                            <div class="sidebar__friend__list__item-text">
-                              <span>
-                                <strong>ju_ni518</strong>
-                              </span>
-                              <br />
-                              <span>회원님을 팔로우합니다</span>
-                            </div>
-                          </div>
-                          <span>팔로우</span>
-                        </li>
-                        <li class="sidebar__friend__list__item">
-                          <div>
-                            <img
-                              class="sidebar__friend__list__item-img"
-                              src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s320x320/83035647_2647476825529923_24793544824717312_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=BFLWDwi3rroAX-w0BBp&ccb=7-4&oh=3a2dec60f0bb1c2e6f5bd529e5d05122&oe=608987A9&_nc_sid=7bff83"
-                            />
-                            <div class="sidebar__friend__list__item-text">
-                              <span>
-                                <strong>sxxujinx</strong>
-                              </span>
-                              <br />
-                              <span>회원님을 팔로우합니다</span>
-                            </div>
-                          </div>
-                          <span>팔로우</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <footer class="sidebar__footer">
-                      <ul class="sidebar__footer__menu">
-                        <li class="sidebar__footer__menu-item">
-                          <a href="#">
-                            <span class="footer__link">소개</span>
-                          </a>
-                        </li>
-                        <li class="sidebar__footer__menu-item">
-                          <a href="#">
-                            <span class="footer__link">도움말</span>
-                          </a>
-                        </li>
-                        <li class="sidebar__footer__menu-item">
-                          <a href="#">
-                            <span class="footer__link">홍보센터</span>
-                          </a>
-                        </li>
-                        <li class="sidebar__footer__menu-item">
-                          <a href="#">
-                            <span class="footer__link">API</span>
-                          </a>
-                        </li>
-                        <li class="sidebar__footer__menu-item">
-                          <a href="#">
-                            <span class="footer__link">채용정보</span>
-                          </a>
-                        </li>
-                        <li class="sidebar__footer__menu-item">
-                          <a href="#">
-                            <span class="footer__link">개인정보처리방침</span>
-                          </a>
-                        </li>
-                        <li class="sidebar__footer__menu-item">
-                          <a href="#">
-                            <span class="footer__link">약관</span>
-                          </a>
-                        </li>
-                      </ul>
-                      <span class="footer__text">© 2021 INSTAGRAM FROM FACEBOOK</span>
-                    </footer>
-                  </div>
-                </div>
               </section>
             </div>
           </div>
